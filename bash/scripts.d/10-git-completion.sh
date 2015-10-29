@@ -1,0 +1,1 @@
+../available-scripts.d/git-completion.sh

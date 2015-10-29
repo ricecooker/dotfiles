@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/dcheng/Code/lifebooker_rails_3/apis'
+let g:netrw_dirhist_2='/Users/dcheng/Code/lifebooker_dashboard/dashboards'
+let g:netrw_dirhist_3='/Users/dcheng/Code/lifebooker_common/lib/lifebooker_common/konfig'
+let g:netrw_dirhist_4='/Users/dcheng/Code/ansible/production/host_vars'
+let g:netrw_dirhist_5='/Users/dcheng/Code/3rdparty/mysql2/lib'
+let g:netrw_dirhist_6='/Users/dcheng/.dotfiles/bash_setup/available-scripts.d'
+let g:netrw_dirhist_7='/private/etc/apache2'
+let g:netrw_dirhist_8='/Users/dcheng/Code/lifebooker_rails_3/lifebooker_common/lib/lifebooker_common/konfig'
+let g:netrw_dirhist_9='/Users/dcheng/Code/lifebooker_rails_3/client_frontend'

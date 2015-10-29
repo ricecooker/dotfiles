@@ -1,0 +1,1 @@
+../available-scripts.d/postgres.app.sh
