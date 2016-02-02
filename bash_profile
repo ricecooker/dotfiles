@@ -29,9 +29,9 @@ for file in ~/.bash/scripts.d/*.*sh; do
   fi
 done
 
-# Check repo
+# Check dotfiles for local edits in the background
 REPO=$(dirname `readlink .bash_profile`)
-echo "Checking status of $REPO..."
-git -C $REPO fetch 2> /dev/null
-git -C $REPO status -sb
-echo "Done"
+(git -C $REPO fetch 2> /dev/null && (
+  printf "\nChecking dirty files in $REPO...\n" && 
+  git -C $REPO status -sb && 
+  echo '[done]') &)
