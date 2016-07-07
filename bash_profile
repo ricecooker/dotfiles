@@ -35,5 +35,3 @@ REPO=$(dirname `readlink .bash_profile`)
   printf "\nChecking dirty files in $REPO...\n" && 
   git -C $REPO status -sb && 
   echo '[done]') &)
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
