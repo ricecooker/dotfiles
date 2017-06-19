@@ -1,0 +1,1 @@
+../available-scripts.d/conda-auto-env.sh

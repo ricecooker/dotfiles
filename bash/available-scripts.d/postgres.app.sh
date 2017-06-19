@@ -2,4 +2,6 @@
 #
 # Postgres.app path
 #
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+if [ -d "/Applications/Postgres.app/Contents/Versions/9.5/bin" ]; then
+  export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
+fi
