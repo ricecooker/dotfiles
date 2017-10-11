@@ -1,0 +1,1 @@
+../available-scripts.d/aws-completion.sh
