@@ -2,8 +2,8 @@
 #
 # rbenv
 #
-if which rbenv; then 
-  eval "$(rbenv init -)" 
+if which rbenv > /dev/null; then 
+  eval "$(rbenv init -)" > /dev/null
   export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 else
   return 1
