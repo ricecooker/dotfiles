@@ -22,7 +22,17 @@ if [ `uname` == "Linux" ]; then
 fi
 
 # Prompt
-export PS1='\u@$HOSTNAME:\w$(__git_ps1 " (%s)")\$ '
+# Determine active Python virtualenv details.
+function set_virtualenv () {
+  if test -z "$VIRTUAL_ENV" ; then
+      PYTHON_VIRTUALENV=""
+  elif test -z "$CONDA_PROMPT_MODIFIER" ; then
+      PYTHON_VIRTUALENV="$CONDA_PROMPT_MODIFIER "
+  else
+      PYTHON_VIRTUALENV="[`basename \"$VIRTUAL_ENV\"`] "
+  fi
+}
+export PS1='$(set_virtualenv)\u@$HOSTNAME:\w$(__git_ps1 " (%s)")\$ '
 
 # Be able to set tab title in OSX
 if [ "$TERM_PROGRAM" == "Apple_Terminal" ]; then
