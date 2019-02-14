@@ -32,7 +32,8 @@ function set_virtualenv () {
       PYTHON_VIRTUALENV="[`basename \"$VIRTUAL_ENV\"`] "
   fi
 }
-export PS1='$(set_virtualenv)\u@$HOSTNAME:\w$(__git_ps1 " (%s)")\$ '
+export PS1="$(set_virtualenv)\T \[$(tput sgr0)\]\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n\$? $(__git_ps1 " (%s)")\$ \[$(tput sgr0)\]"
+# export PS1='$(set_virtualenv)\u@$HOSTNAME:\w$(__git_ps1 " (%s)")\$ '
 
 # Be able to set tab title in OSX
 if [ "$TERM_PROGRAM" == "Apple_Terminal" ]; then
